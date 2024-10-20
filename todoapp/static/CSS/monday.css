@@ -1,0 +1,13 @@
+.h1{
+    color: red;
+}
+
+.link{
+    color: blue;
+}
+.link { text-decoration: none !important; }
+.link:hover { text-decoration: underline; }
+
+.ol{
+    color: red;
+}

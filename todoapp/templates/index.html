@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>To Do</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <link rel="icon" href="{%  static 'img/favicon.ico' %}">
 </head>
 <body>
-<p>Some text</p>
+<h1 class="colored_text">Дела на неделю</h1>
+<div>
+    <a href="monday" class="colored_text">Понедельник</a>
+    <a href="tuesday">Вторник</a>
+    <a href="wednesday">Среда</a>
+    <a href="thursday">Четверг</a>
+    <a href="friday">Пятница</a>
+    <a href="saturday">Суббота</a>
+    <a href="sunday">Воскресенье</a>
+</div>
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Ваше имя</label>
+        <input type="text" >
+
+        <label>Название задачи</label>
+        <input type="text" >
+
+        <label>Важность задачи</label>
+        <input type="number">
+
+        <label>Сроки выполнения</label>
+        <input type="number" >
+
+        <label>Описание задачи</label>
+        <textarea cols="30" rows="10"></textarea>
+
+        <input type="submit" value="Добавить задачу">
+    </form>
+
+</div>
 </body>
 </html>

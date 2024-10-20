@@ -20,5 +20,12 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html'))
+    path('', TemplateView.as_view(template_name='index.html')),
+    path('monday', TemplateView.as_view(template_name='monday.html')),
+    path('tuesday', TemplateView.as_view(template_name='tuesday.html')),
+    path('wednesday', TemplateView.as_view(template_name='wednesday.html')),
+    path('thursday', TemplateView.as_view(template_name='thursday.html')),
+    path('friday', TemplateView.as_view(template_name='friday.html')),
+    path('saturday', TemplateView.as_view(template_name='saturday.html')),
+    path('sunday', TemplateView.as_view(template_name='sunday.html'))
 ]
